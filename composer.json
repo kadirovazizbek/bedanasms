@@ -1,0 +1,31 @@
+{
+    "name": "bedana/sms-sender",
+    "description": "A PHP library for sending SMS messages via API",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bedana SMS Sender",
+            "email": "info@bedana-sms-sender.com"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "BedanaSmsSender\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "BedanaSmsSender\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
