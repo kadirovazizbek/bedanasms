@@ -56,7 +56,7 @@ class SmsClient implements SmsClientInterface
     {
         $this->validateMessage($message);
 
-        return $this->sendRequest('/v1/sms/send', [
+        return $this->sendRequest('/api/v1/sms/send', [
             'messages' => [$message]
         ]);
     }
@@ -74,7 +74,7 @@ class SmsClient implements SmsClientInterface
             $this->validateMessage($message);
         }
 
-        return $this->sendRequest('/v1/sms/send', [
+        return $this->sendRequest('/api/v1/sms/send', [
             'messages' => $messages
         ]);
     }
@@ -89,7 +89,7 @@ class SmsClient implements SmsClientInterface
     public function getStatus(string $messageId): array
     {
         try {
-            $response = $this->httpClient->get("/v1/sms/status/{$messageId}");
+            $response = $this->httpClient->get("/api/v1/sms/status/{$messageId}");
             return json_decode($response->getBody()->getContents(), true);
         } catch (GuzzleException $e) {
             if ($e->getCode() == 404) {

@@ -38,7 +38,7 @@ class SimpleSmsClient implements SmsClientInterface
     {
         $this->validateMessage($message);
 
-        return $this->sendRequest('/v1/sms/send', [
+        return $this->sendRequest('/api/v1/sms/send', [
             'messages' => [$message]
         ]);
     }
@@ -56,7 +56,7 @@ class SimpleSmsClient implements SmsClientInterface
             $this->validateMessage($message);
         }
 
-        return $this->sendRequest('/v1/sms/send', [
+        return $this->sendRequest('/api/v1/sms/send', [
             'messages' => $messages
         ]);
     }
@@ -71,7 +71,7 @@ class SimpleSmsClient implements SmsClientInterface
     public function getStatus(string $messageId): array
     {
         try {
-            return $this->httpClient->get("/v1/sms/status/{$messageId}");
+            return $this->httpClient->get("/api/v1/sms/status/{$messageId}");
         } catch (\Exception $e) {
             if ($e->getCode() == 404) {
                 return [
