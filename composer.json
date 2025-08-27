@@ -1,5 +1,5 @@
 {
-    "name": "bedana/sms-sender",
+    "name": "bedanasms/sms-sender",
     "description": "A PHP library for sending SMS messages via API",
     "type": "library",
     "license": "MIT",
