@@ -23,9 +23,7 @@ try {
     // Example 1: Send a single SMS
     $response = $client->send([
         'phone' => '998123456789',
-        'text' => 'Hello from PHP SMS Sender!',
-        'operator' => 'uzmobile',
-        'prefix' => '998'
+        'text' => 'Hello from PHP SMS Sender!'
     ]);
 
     echo "Single SMS response:\n";

@@ -132,7 +132,7 @@ class SmsClient implements SmsClientInterface
      */
     private function validateMessage(array $message): bool
     {
-        $requiredFields = ['phone', 'text', 'operator', 'prefix'];
+        $requiredFields = ['phone', 'text'];
 
         foreach ($requiredFields as $field) {
             if (!isset($message[$field])) {

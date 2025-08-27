@@ -21,14 +21,12 @@ The library provides two client implementations:
 use BedanaSmsSender\SmsClient;
 
 // Create a new SMS client
-$client = new SmsClient('YOUR_API_KEY', 'https://api.example.com');
+$client = new SmsClient('YOUR_API_KEY', 'https://bedana.uz');
 
 // Send a single SMS
 $response = $client->send([
     'phone' => '998123456789',
-    'text' => 'Hello from PHP SMS Sender!',
-    'operator' => 'uzmobile',
-    'prefix' => '998'
+    'text' => 'Hello from PHP SMS Sender!'
 ]);
 
 // Send multiple SMS messages
