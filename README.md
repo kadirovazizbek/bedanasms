@@ -5,7 +5,7 @@ A framework-agnostic PHP library for sending SMS messages via API.
 ## Installation
 
 ```bash
-composer require bedana/sms-sender
+composer require bedanasms/sms-sender
 ```
 
 ## Usage
